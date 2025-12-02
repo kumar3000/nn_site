@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+        </script>
+        <div id="controls-3d-wrapper" style="display: none;">
+            <div id="floatingControls" class="floating-controls">
+                <div class="control">
+                    <label for="input1Slider">Activation: <span id="input1Value">1.00</span></label>
+                    <input type="range" id="input1Slider" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+        </div>
+        <script type="module" src="script.js"></script>
+        <title>NOT Gate Perceptron - 3D</title>
+    </head>
+    <body>
+        <div id="canvas-container" class="canvas-container"></div>
+    </body>
+</html>

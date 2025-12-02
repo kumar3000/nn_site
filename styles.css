@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+/* 3D Canvas Container */
+.canvas-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    pointer-events: auto;
+}
+
+#controls-3d-wrapper {
+    pointer-events: none;
+}
+
+#controls-3d-wrapper * {
+    pointer-events: auto;
+}
+
+/* Floating Controls */
+.floating-controls {
+    position: fixed;
+    pointer-events: auto;
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #00ff41;
+    border-radius: 8px;
+    padding: 16px 20px;
+    min-width: 180px;
+    z-index: 100;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    visibility: visible;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control label {
+    color: #00ff41;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control input[type="range"] {
+    width: 100%;
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00ff41;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.control input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.control input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00ff41;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.control input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
